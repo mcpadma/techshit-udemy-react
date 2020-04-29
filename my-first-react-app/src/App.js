@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import NameTag from './components/nameTag';
 import Fragment from './components/fragments';
 import Input from './components/input';
 import CondRender from './components/conditionalRendering';
+import Hooks from './components/hooks';
+import ComplexState from './components/complexState';
+import ManagingLists from './components/managingLists';
 
 const nameStyle = {
   color:"Grey",
@@ -18,8 +21,29 @@ const nameTagTitle = {
   color:"yellow",
   border:"1px dotted yellow"
 };
+const makeGreen = BaseComponent => props => {
+  const addGreen = {
+    style: {
+      color:"green"
+    }
+  }
+  const newProps = {
+    ...props, ...addGreen
+  }
+  return <BaseComponent {...newProps}/>
+}
+
+const RemoveInline = BaseComponent => props => {
+  const newProps = {...props};
+  delete newProps.style;
+  return <BaseComponent {...newProps}/>
+}
+const GreenNameTag = makeGreen(CondRender);
+const CleanNameTag = RemoveInline(CondRender);
+
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -54,6 +78,20 @@ function App() {
         <CondRender firstName="Padma" lastName="Ganapathi"></CondRender>
         <CondRender firstName="Dughu" lastName="Ganapathi"></CondRender>
         <CondRender></CondRender>
+
+        <h1>Higher order components</h1>
+        <GreenNameTag firstName="Ganapathi" lastName="Padma"></GreenNameTag>
+        <CleanNameTag style={{color:"red"}} firstName="Padma" lastName="Ganapathi"></CleanNameTag>
+        <CondRender firstName="Dughu" lastName="Ganapathi"></CondRender>
+
+        <h1>Use state hooks</h1>
+        <Hooks></Hooks>
+
+        <h1>Complex States</h1>
+        <ComplexState></ComplexState>
+
+        <h1>Managing Lists</h1>
+        <ManagingLists></ManagingLists>
       </header>
     </div>
   );

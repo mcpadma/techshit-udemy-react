@@ -10,8 +10,8 @@ function condRender(props) {
     }
     return (
         <div className="name">
-            <h3>first name:{props.firstName}</h3>
-            <h3>last name:{props.lastName}</h3>
+            <h3 style={props.style}>first name:{props.firstName}</h3>
+            <h3 style={props.style}>last name:{props.lastName}</h3>
             {props.firstName === "Ganapathi" && <div style={{color:"green"}}>Croods</div>}
             {(props.firstName  === "Ganapathi"|| props.lastName === "Ganapathi") && <div style={{color:"orange"}}>Member of croods family</div>}
         </div>

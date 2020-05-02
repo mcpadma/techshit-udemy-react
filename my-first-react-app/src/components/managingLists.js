@@ -16,7 +16,7 @@ function ManagingLists() {
             names.map((v,i) => {
                 // return <NameTag key={'${i}${v.firstNAme}${v.lastname}'}  firstName={v.firstName} 
                 //     lastName={v.lastName}></NameTag>
-                return <NameTag key={'${i}${v.firstNAme}${v.lastname}'}  firstName={v.firstName} 
+                return <NameTag key={`${i}${v.firstNAme}${v.lastname}`}  firstName={v.firstName} 
                     lastName={v.lastName}></NameTag>
             })
         }

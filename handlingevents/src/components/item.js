@@ -8,7 +8,7 @@ return(
         <h3>Calories: {props.calorie}</h3> */}
         {
             props.editable ? 
-            <input type="text" defaultValue={props.item.name}/> 
+            <input type="text" defaultValue={props.item.name} onKeyPress={(e) => props.onKeyPress(e,props.index)}/> 
             : 
             <h3 onDoubleClick = {props.onDoubleClick}>Name: {props.item.name}</h3>
         }

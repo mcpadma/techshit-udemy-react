@@ -1,6 +1,7 @@
-import React,{useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 let renderCount = 0;
+
 function MemoChild() {
     useEffect(()=>{
         renderCount++;

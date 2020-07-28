@@ -6,6 +6,8 @@ import UseEffectExample from './components/useEffectExample';
 import FetchDataAsync from './components/dataFetchAsync';
 import Memoization from './components/memoization';
 import UsePreviousHook from './components/usePreviousHooks';
+import UseLayoutEffectHook from './components/useLayoutEffectHooks';
+import UseDebugValueHook from './components/useDebugValueHooks';
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
         <FetchDataAsync></FetchDataAsync>
         <Memoization></Memoization>
         <UsePreviousHook></UsePreviousHook>
+        <UseLayoutEffectHook></UseLayoutEffectHook>
+        <UseDebugValueHook></UseDebugValueHook>
       </header>
     </div>
   );

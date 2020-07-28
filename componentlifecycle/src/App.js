@@ -4,6 +4,7 @@ import './App.css';
 import UseEffectHooks from './components/useEffectHooks';
 import UseEffectExample from './components/useEffectExample';
 import FetchDataAsync from './components/dataFetchAsync';
+import Memoization from './components/memoization';
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
         <UseEffectHooks></UseEffectHooks>
         <UseEffectExample></UseEffectExample>
         <FetchDataAsync></FetchDataAsync>
+        <Memoization></Memoization>
       </header>
     </div>
   );

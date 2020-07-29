@@ -48,3 +48,15 @@
   border:1px solid gray;
   padding: 5px;
   }
+  .button-style{
+    padding: 5px;
+    width:200px;
+    color: #61dafb;
+    background: #565656;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .button-style:disabled {
+    background: #ddd;
+    
+  }

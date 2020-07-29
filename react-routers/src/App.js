@@ -11,10 +11,13 @@ import "./App.css";
 
 import AboutPage from "./pages/AboutPage";
 import UserPage from "./pages/UserPage";
+import HomePage from "./pages/HomePage";
+import  messageContext from './contexts/messageContext';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [age, setAge] = useState('');
+  const [message, setMessage] = useState("I am being shared");
 
   function loginHandle() {
     setLoggedIn(!loggedIn);
@@ -24,15 +27,18 @@ function App() {
   }
   return (
     <BrowserRouter>
+    {/* <messageContext.Provider value="I am being shared"> */}
+    <messageContext.Provider value={[message, setMessage]}>
       <div className="App">
         <header className="App-header">
-          <Route
+          {/* <Route
             path="/"
             exact
             render={() => {
               return <h1>Welcome Home</h1>;
             }}
-          ></Route>
+          ></Route> */}
+           <Route path="/" exact component={HomePage}></Route>
           {/* <Route path="/about" exact render={()=>{
           return<h1>Welcome About Page</h1>
         }}></Route> */}
@@ -117,6 +123,7 @@ function App() {
           </button>
         </header>
       </div>
+      </messageContext.Provider>
     </BrowserRouter>
   );
 }

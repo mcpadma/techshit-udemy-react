@@ -1,15 +1,13 @@
 import React, {useContext} from 'react';
 import messageContext from './../contexts/messageContext';
-import Outer from './components/outer';
 
-function AboutPage() {
+function HomePage() {
     return(
         <div>
-            <h1>Welcome About Page</h1>
+            <h1>Welcome Home</h1>
             <h2>Message: {useContext(messageContext)}</h2>
-            <Outer></Outer>
         </div>
     )
 }
 
-export default AboutPage;
+export default HomePage;

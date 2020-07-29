@@ -8,6 +8,7 @@ import Memoization from './components/memoization';
 import UsePreviousHook from './components/usePreviousHooks';
 import UseLayoutEffectHook from './components/useLayoutEffectHooks';
 import UseDebugValueHook from './components/useDebugValueHooks';
+import UseReducerHooks from './components/useReducerHook';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
         <UsePreviousHook></UsePreviousHook>
         <UseLayoutEffectHook></UseLayoutEffectHook>
         <UseDebugValueHook></UseDebugValueHook>
+        <UseReducerHooks></UseReducerHooks>
       </header>
     </div>
   );

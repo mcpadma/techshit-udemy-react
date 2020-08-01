@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.c{
+font-size: 0px;
+min-width:308px;
+}
+
+.r{
+display: inline-block;
+border:1px solid gray;
+font-size:90px;
+width:100px;
+height: 100px;
+text-align: center;
+line-height: 100px;
+box-sizing:border-box;
+vertical-align: middle;
+}
+.button-style{
+  padding: 5px;
+  width:200px;
+  color: #61dafb;
+  background: #565656;
+  font-size: 20px;
+  cursor: pointer;
+}
+.item-style{
+  list-style-type: none;
+  border:1px solid gray;
+  width:50px;
+  margin-bottom: 5px;
+}
